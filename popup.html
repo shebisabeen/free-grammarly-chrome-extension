@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammarly-free</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:2px;">
+        <img src="icons/icon48.png" alt="grammarly-free logo" style="height:1.4em;width:1.4em;vertical-align:middle;">
+        <span style="font-size:1.4em;font-weight:bold;">Grammarly-free</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:3px;">
+        <button id="homeBtn" type="button" title="Home" class="navBtn" style="background:none;border:none;cursor:pointer;font-size:1.3em;padding:4px;border-radius:6px;"><span role="img" aria-label="home">🏠</span></button>
+        <button id="historyBtn" type="button" title="History" class="navBtn" style="background:none;border:none;cursor:pointer;font-size:1.3em;padding:4px;border-radius:6px;"><span role="img" aria-label="history">🕑</span></button>
+        <button id="settingsBtn" type="button" title="Settings" class="navBtn" style="background:none;border:none;cursor:pointer;font-size:1.3em;padding:4px;border-radius:6px;"><span role="img" aria-label="settings">⚙️</span></button>
+      </div>
+    </div>
+    <div id="mainSection">
+      <textarea id="inputText" placeholder="Type your sentence here..."></textarea>
+      <button id="fixBtn">Fix Grammar</button>
+      <textarea id="outputText" readonly placeholder="Corrected sentence will appear here..."></textarea>
+      <button id="copyBtn">Copy Result</button>
+    </div>
+    <div id="historySection">
+    </div>
+    <div id="settingsSection">
+      <label for="geminiKeyInput">Gemini API Key:</label>
+      <input type="password" id="geminiKeyInput" placeholder="Enter your Gemini API key" style="width:97%; margin-bottom:6px;" />
+      <button id="saveGeminiKeyBtn" type="button">Save Gemini Key</button>
+      <span id="geminiKeyStatus" style="font-size:0.9em; margin-left:8px;"></span>
+      <div class="settings-footer">
+        <div class="version" id="versionInfo"></div>
+        <div>
+          <a href="https://sabeencs.com" target="_blank" class="footer-link">🌐 Website</a>
+          <a href="https://github.com/shebisabeen/free-grammarly-chrome-extension" target="_blank" class="footer-link">🐙 GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
