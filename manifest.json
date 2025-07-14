@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Grammarly-free",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Fix the grammar of your sentences for free using AI.",
   "action": {
     "default_popup": "popup.html",
