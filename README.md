@@ -14,6 +14,11 @@ No paid APIs required—just bring your own Gemini API key!
 - Clean, modern UI with a friendly design
 - Settings for API key, version info, and quick links
 
+## Getting a Gemini API Key
+
+To use this extension, you need a free Gemini API key.  
+You can generate your key here: [Generate Gemini API Key](https://aistudio.google.com/apikey)
+
 ## Privacy & Security
 
 - **Your data is private:** All your API keys and grammar history are stored only in your browser's local storage.
