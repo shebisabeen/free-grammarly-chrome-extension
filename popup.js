@@ -1,5 +1,5 @@
-// Gemini 2.5 Flash-Lite API endpoint
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite-preview-06-17:generateContent';
+// Gemini API endpoint
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent';
 
 function getGeminiKey() {
   return localStorage.getItem('gemini_api_key') || '';
@@ -223,4 +223,4 @@ historyBtn.addEventListener('click', () => showSection('history'));
 settingsBtn.addEventListener('click', () => showSection('settings'));
 
 // Show main section by default
-showSection('main'); 
+showSection('main');
