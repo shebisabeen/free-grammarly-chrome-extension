@@ -21,7 +21,10 @@
     </div>
     <div id="mainSection">
       <textarea id="inputText" placeholder="Type your sentence here..."></textarea>
-      <button id="fixBtn">Fix Grammar</button>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+        <button id="fixBtn" style="margin-bottom:0;">Fix Grammar</button>
+        <a id="editCustomPromptLink" href="#" style="font-size:0.9em;color:#37b154;text-decoration:none;white-space:nowrap;">Edit Custom Prompt</a>
+      </div>
       <textarea id="outputText" readonly placeholder="Corrected sentence will appear here..."></textarea>
       <button id="copyBtn">Copy Result</button>
     </div>
@@ -35,6 +38,13 @@
       <a href="https://aistudio.google.com/apikey" target="_blank" class="footer-link" style="display:block;margin-top:6px;">
         🔑 Generate Gemini API Key
       </a>
+      
+      <div style="margin-top:16px;">
+        <label for="customPromptInput">Custom Prompt (Optional):</label>
+        <textarea id="customPromptInput" placeholder="Add custom instructions here (e.g., 'Use formal tone', 'British English')" style="width:93%; min-height:60px; margin-top:6px;"></textarea>
+        <button id="saveCustomPromptBtn" type="button">Save Custom Prompt</button>
+        <span id="customPromptStatus" style="font-size:0.9em; margin-left:8px;"></span>
+      </div>
       <div class="settings-footer">
         <div class="version" id="versionInfo"></div>
         <div style="margin-top:6px;">
@@ -49,4 +59,4 @@
   </div>
   <script src="popup.js"></script>
 </body>
-</html> 
+</html>

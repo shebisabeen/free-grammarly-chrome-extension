@@ -9,6 +9,14 @@ function setGeminiKey(key) {
   localStorage.setItem('gemini_api_key', key);
 }
 
+function getCustomPrompt() {
+  return localStorage.getItem('custom_prompt') || '';
+}
+
+function setCustomPrompt(prompt) {
+  localStorage.setItem('custom_prompt', prompt);
+}
+
 document.getElementById('fixBtn').addEventListener('click', async () => {
   const inputText = document.getElementById('inputText').value;
   const outputText = document.getElementById('outputText');
@@ -21,7 +29,12 @@ document.getElementById('fixBtn').addEventListener('click', async () => {
   }
 
   try {
-    const prompt = `Correct the grammar of this sentence: "${inputText}". Only return the corrected sentence, nothing else.`;
+    const customPrompt = getCustomPrompt();
+    let prompt = `Correct the grammar of this sentence: "${inputText}".`;
+    if (customPrompt) {
+      prompt += ` Additional instructions: ${customPrompt}.`;
+    }
+    prompt += ` Only return the corrected sentence, nothing else.`;
     const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
       method: 'POST',
       headers: {
@@ -94,6 +107,21 @@ saveGeminiKeyBtn.addEventListener('click', () => {
     geminiKeyStatus.textContent = 'Please enter a Gemini API key.';
     geminiKeyStatus.style.color = 'red';
   }
+});
+
+// Custom Prompt section logic
+const customPromptInput = document.getElementById('customPromptInput');
+const saveCustomPromptBtn = document.getElementById('saveCustomPromptBtn');
+const customPromptStatus = document.getElementById('customPromptStatus');
+
+saveCustomPromptBtn.addEventListener('click', () => {
+  const prompt = customPromptInput.value.trim();
+  setCustomPrompt(prompt);
+  customPromptStatus.textContent = 'Custom prompt saved!';
+  customPromptStatus.style.color = 'green';
+  setTimeout(() => {
+    customPromptStatus.textContent = '';
+  }, 2000);
 });
 
 // --- History logic ---
@@ -205,7 +233,9 @@ function showSection(section) {
     settingsBtn.classList.add('active');
     settingsSection.style.display = 'block';
     geminiKeyInput.value = getGeminiKey();
+    customPromptInput.value = getCustomPrompt();
     geminiKeyStatus.textContent = '';
+    customPromptStatus.textContent = '';
     fetch(chrome.runtime.getURL('manifest.json'))
       .then(response => response.json())
       .then(manifest => {
@@ -221,6 +251,17 @@ function showSection(section) {
 homeBtn.addEventListener('click', () => showSection('main'));
 historyBtn.addEventListener('click', () => showSection('history'));
 settingsBtn.addEventListener('click', () => showSection('settings'));
+
+// Edit Custom Prompt link handler
+const editCustomPromptLink = document.getElementById('editCustomPromptLink');
+editCustomPromptLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showSection('settings');
+  // Optional: Focus on the custom prompt input after a short delay
+  setTimeout(() => {
+    customPromptInput.focus();
+  }, 100);
+});
 
 // Show main section by default
 showSection('main');
