@@ -1,6 +1,6 @@
 # grammarly-free
 
-A free Chrome extension to fix the grammar of your sentences using AI (Gemini 2.5 Flash-Lite).
+A free Chrome extension to fix the grammar of your sentences using AI (Gemini Flash-Lite Latest).
 No paid APIs required—just bring your own Gemini API key!
 
 **You can use Gemini's free tier—no payment required!**
@@ -8,7 +8,7 @@ No paid APIs required—just bring your own Gemini API key!
 ## Features
 
 - Instantly corrects grammar for any sentence you input
-- Uses Google's Gemini 2.5 Flash-Lite model (bring your own API key, free tier supported)
+- Uses Google's Gemini Flash-Lite Latest model (bring your own API key, free tier supported)
 - Copy corrected results with one click
 - Keeps a history of your recent grammar fixes
 - Clean, modern UI with a friendly design
@@ -42,7 +42,7 @@ You can generate your key here: [Generate Gemini API Key](https://aistudio.googl
 
 ## Links
 
-- 🌐 [Website](https://sabeencs.com)
+- 🌐 [Website](https://profile.sabeencs.com)
 - 🐙 [GitHub](https://github.com/shebisabeen/free-grammarly-chrome-extension)
 - ☕ [Buy Me a Coffee](https://coff.ee/shebisabeen)
 
