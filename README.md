@@ -45,6 +45,7 @@ You can generate your key here: [Generate Gemini API Key](https://aistudio.googl
 - 🌐 [Website](https://profile.sabeencs.com)
 - 🐙 [GitHub](https://github.com/shebisabeen/free-grammarly-chrome-extension)
 - ☕ [Buy Me a Coffee](https://coff.ee/shebisabeen)
+- 🌐 [Chrome web store](https://chromewebstore.google.com/detail/grammarly-free/piehgmbapandhlpdlceaeknacfiocnkl)
 
 ## License
 
