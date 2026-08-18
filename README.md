@@ -1,4 +1,4 @@
-# grammarly-free
+# Grammar-free
 
 A free Chrome extension to fix the grammar of your sentences using AI (Gemini Flash-Lite Latest).
 No paid APIs required—just bring your own Gemini API key!
@@ -43,9 +43,9 @@ You can generate your key here: [Generate Gemini API Key](https://aistudio.googl
 ## Links
 
 - 🌐 [Website](https://profile.sabeencs.com)
-- 🐙 [GitHub](https://github.com/shebisabeen/free-grammarly-chrome-extension)
+- 🐙 [GitHub](https://github.com/shebisabeen/free-grammar-chrome-extension)
 - ☕ [Buy Me a Coffee](https://coff.ee/shebisabeen)
-- 🌐 [Chrome web store](https://chromewebstore.google.com/detail/grammarly-free/piehgmbapandhlpdlceaeknacfiocnkl)
+- 🌐 [Chrome web store](https://chromewebstore.google.com/detail/Grammar-free/piehgmbapandhlpdlceaeknacfiocnkl)
 
 ## License
 
