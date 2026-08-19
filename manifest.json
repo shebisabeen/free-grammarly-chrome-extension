@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Grammar-free",
-  "version": "1.4",
+  "version": "1.5",
   "description": "Fix the grammar of your sentences for free using AI.",
   "action": {
     "default_popup": "popup.html",

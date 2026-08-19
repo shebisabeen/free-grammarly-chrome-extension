@@ -1,0 +1,8 @@
+{
+  "name": "grammar-free",
+  "version": "1.5.0",
+  "description": "Fix the grammar of your sentences for free using AI.",
+  "scripts": {
+    "zip": "zip -r grammar-free.zip manifest.json popup.html popup.js popup.css icons/"
+  }
+}
